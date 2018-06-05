@@ -45,25 +45,25 @@ var payment = {
 
 console.log(payment.year + "\t" + payment.balance + "\t" + payment.number + "\t" + payment.interest);
 
-var minPayment = calculateMinimumPayment(balance, minPaymentPercent);
+var minPayment= calculateMinimumPayment(balance, minPaymentPercent);
 
-console.log(minPayment);
+console.log(minPayment.toFixed(2));
 
 var interestOnBalance = balance * ( interestRate / monthInYear);
 
-console.log(interestOnBalance);
+console.log(interestOnBalance.toFixed(2));
 
 var thisMonthsPayment = balance + interestOnBalance;
 
-console.log(thisMonthsPayment);
+console.log(thisMonthsPayment.toFixed(2));
 
 var balance = (balance + interestOnBalance) - minPayment;
 
-console.log(balance);
+console.log(balance.toFixed(2));
 
 totalInterest += interestOnBalance;
 
-console.log(totalInterest);
+console.log(totalInterest.toFixed(2));
 
 var year = 1;
 var paymentNumber = 1;
